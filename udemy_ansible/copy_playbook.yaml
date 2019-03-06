@@ -1,0 +1,16 @@
+-
+  name: copy to remote testserver
+  hosts: all
+  tasks:
+    - name: secure copy
+      copy:
+        src: /home/Dawadi/Desktop/code/final_tar.py
+        dest: /tmp/
+-
+  name: restart the server
+  hosts: deb9test
+  tasks:
+    - name: script
+      script: /home/Dawadi/Desktop/python.py
+      args:
+        executable: python

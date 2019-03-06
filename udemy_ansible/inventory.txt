@@ -1,0 +1,2 @@
+deb9test ansible_host=10.42.176.180 ansible_user=root ansible_ssh_pass=liNux
+TGBSquid ansible_host=10.42.176.179 ansible_user=root ansible_ssh_pass=liNux
