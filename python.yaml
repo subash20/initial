@@ -1,0 +1,17 @@
+-
+  name: Esecuting python scripts remotely
+  hosts: deb9test
+  tasks:
+    - name: copy file to destination
+      copy:
+        src: /home/Dawadi/udemy_ansible/listdir.py
+        dest: /tmp/
+
+    - name: Execution of python file
+      script: /home/Dawadi/udemy_ansible/listdir.py
+      args:
+        executable: python
+      register: find_output
+
+    - debug:
+        var: find_output
